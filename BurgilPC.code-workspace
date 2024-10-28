@@ -1,0 +1,36 @@
+{
+	"folders": [
+		{
+			"name": "Burgil PC",
+			"path": "."
+		},
+	],
+	"settings": {
+		"files.exclude": {
+			".env": true,
+			".env.example": true,
+			// ---
+			"logo": true,
+			"cache": true,
+			"start.cmd": true,
+			"README.md": false,
+			"bun.lockb": true,
+			"*/.gitignore": false,
+			".gitignore": false,
+			".gitattributes": true,
+			"globals.d.ts": true,
+			"tailwind.css": true,
+			"node_modules": true,
+			"tailwind.config.js": true,
+			// ---
+			"out": true,
+			"tsconfig.json": true,
+			"tsconfig.browser.json": true,
+			// ---
+			"utils": false,
+			"hotreload": false,
+			"package.json": false,
+			"BurgilPC.code-workspace": false,
+		}
+	}
+}

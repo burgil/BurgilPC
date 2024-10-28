@@ -1,0 +1,5 @@
+pip install opencv-python numpy torch torchvision
+pip install opencv-python pyautogui numpy
+pip install PyQt5
+pip install flask
+pip install PyQt5 pyautogui pillow

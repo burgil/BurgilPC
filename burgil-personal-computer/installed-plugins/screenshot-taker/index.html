@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Screenshot Taker</title>
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                cursor: crosshair;
+                background: transparent;
+            }
+
+            .selection {
+                position: absolute;
+                border: 2px dashed rgba(115, 255, 0, 0.8);
+                background-color: rgba(81, 255, 0, 0.3);
+            }
+
+            #modal {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                z-index: 10;
+                text-align: center;
+            }
+
+            #modal input {
+                width: 80%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            }
+
+            #modal button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                margin: 5px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            #modal button.save {
+                background: linear-gradient(90deg, rgba(0, 204, 255, 1) 0%, rgba(0, 255, 128, 1) 100%);
+            }
+
+            #modal button.cancel {
+                background: #ff3d00;
+            }
+
+            #modal button.try-again {
+                background: #f5a623;
+            }
+
+            #modal button:hover {
+                opacity: 0.8;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="selection" class="selection" style="display: none;"></div>
+        <div id="modal">
+            <input type="text" id="filename" placeholder="Enter filename (without .png)" />
+            <div>
+                <button class="save">Save</button>
+                <button class="try-again">Try Again</button>
+                <button class="cancel">Cancel</button>
+            </div>
+        </div>
+        <script>
+            const selectionDiv = document.getElementById('selection');
+            let startX, startY;
+            let isModalOpen = false;
+
+            window.onmousedown = (event) => {
+                if (event.button !== 0 || isModalOpen) return;
+                startX = event.clientX;
+                startY = event.clientY;
+                selectionDiv.style.left = `${startX}px`;
+                selectionDiv.style.top = `${startY}px`;
+                selectionDiv.style.display = 'block';
+                selectionDiv.style.width = '0';
+                selectionDiv.style.height = '0';
+                window.onmousemove = (e) => {
+                    const width = e.clientX - startX;
+                    const height = e.clientY - startY;
+                    selectionDiv.style.width = `${Math.abs(width)}px`;
+                    selectionDiv.style.height = `${Math.abs(height)}px`;
+                    selectionDiv.style.left = `${width < 0 ? e.clientX : startX}px`;
+                    selectionDiv.style.top = `${height < 0 ? e.clientY : startY}px`;
+                };
+                window.onmouseup = async (e) => {
+                    window.onmousemove = null;
+                    window.onmouseup = null;
+                    const rect = {
+                        x: Math.min(startX, e.clientX),
+                        y: Math.min(startY, e.clientY),
+                        width: Math.abs(e.clientX - startX),
+                        height: Math.abs(e.clientY - startY)
+                    };
+                    selectionDiv.style.display = 'block';
+                    const modal = document.getElementById('modal');
+                    modal.style.display = 'block';
+                    isModalOpen = true;
+                    await window.electron.showModal();
+                    modal.querySelector('.save').onclick = async () => {
+                        const name = document.getElementById('filename').value;
+                        try {
+                            document.body.style.display = 'none';
+                            await window.electron.takeScreenshot({ rect, name });
+                            window.close();
+                        } catch (error) {
+                            console.error('Error saving screenshot:', error);
+                        }
+                    };
+                    modal.querySelector('.try-again').onclick = async () => {
+                        modal.style.display = 'none';
+                        isModalOpen = false;
+                        selectionDiv.style.display = 'none';
+                        await window.electron.hideModal();
+                    };
+                    modal.querySelector('.cancel').onclick = () => {
+                        window.close();
+                    };
+                };
+            };
+        </script>
+    </body>
+</html>

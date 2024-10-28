@@ -1,0 +1,117 @@
+html,
+body {
+	background: transparent;
+	background-color: transparent;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: transparent;
+	overflow: hidden;
+}
+
+#container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 380px;
+	padding: 0;
+	padding-top: 5px;
+	backdrop-filter: blur(12px);
+	border-radius: 16px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.message {
+	display: flex;
+	align-items: center;
+	padding: 12px;
+	background-color: rgba(26, 26, 26, 0.45);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+	border-radius: 12px;
+	opacity: 0.92;
+	transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.message:hover {
+	opacity: 1;
+	background-color: rgba(26, 26, 26, 0.9);
+}
+
+.message-icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #28a745;
+	margin-right: 16px;
+	-webkit-app-region: drag;
+	position: relative;
+	z-index: 1;
+}
+
+.message-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 16px;
+	color: white;
+	margin-bottom: 4px;
+}
+
+.text {
+	font-size: 14px;
+	max-height: 7.5em;
+	/* Adjust for about 6 lines */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 6;
+	line-height: 1.4;
+}
+
+.hidden {
+	display: none;
+}
+
+@keyframes slideDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
+
+.message-animate-in {
+	animation: slideDown 0.5s ease forwards;
+}
+
+.message-animate-out {
+	animation: slideUp 0.5s ease forwards;
+}

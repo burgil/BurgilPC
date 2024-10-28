@@ -1,0 +1,62 @@
+{
+    "marketplace": [
+        {
+            "plugin": "ai-vision-server",
+            "name": "AI Vision Server - 🏆 First Marketplace Plugin",
+            "description": "AI Vision Server - Giving eyes to your PC has never been easier! This is one small step for computers, one giant leap for computer kind!",
+            "version": "0.0.0",
+            "released": "2024-10-24",
+            "updated": "2024-10-24",
+            "author": "Burgil",
+            "license": "",
+            "url": "https://alpha",
+            "downloads": 42,
+            "image": "logo.png",
+            "price": "free",
+            "status": "official",
+            "category": "vision",
+            "guide": "commands4.md",
+            "engines": {
+                "python": ">=3.12.7",
+                "pip": ">=24.2"
+            },
+            "depends": [
+                "screenshot-taker"
+            ],
+            "commands": [
+                "python flask-server4.py"
+            ],
+            "install": [
+                "pip install torch torchvision opencv-python numpy flask PyQt5 pyautogui pillow"
+            ]
+        },
+        {
+            "plugin": "screenshot-taker",
+            "name": "Screenshot Taker - 🏆 Second Marketplace Plugin",
+            "description": "Screenshot Taker - Teaching your computer how to interact with itself is now officially fun.",
+            "version": "0.0.0",
+            "released": "2024-10-24",
+            "updated": "2024-10-24",
+            "author": "Burgil",
+            "license": "",
+            "url": "https://alpha",
+            "downloads": 1,
+            "image": "logo.png",
+            "price": "free",
+            "status": "official",
+            "category": "vision",
+            "guide": "Easy to use",
+            "engines": {
+                "node": ">=20.17.0",
+                "npm": ">=10.9.0"
+            },
+            "depends": [],
+            "commands": [
+                "npm start"
+            ],
+            "install": [
+                "npm install"
+            ]
+        }
+    ]
+}

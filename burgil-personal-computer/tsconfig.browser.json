@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "public/**/*",
+  ],
+  "compilerOptions": {
+    "outDir": "./out", /* Specify an output folder for all emitted files. */
+  }
+}

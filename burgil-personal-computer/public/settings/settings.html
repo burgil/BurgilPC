@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Settings Page</title>
+        <link rel="stylesheet" href="../../out/tailwind.css">
+        <link rel="stylesheet" href="../web/scroller.css">
+        <link rel="stylesheet" href="settings.css">
+        <script defer>
+            function showSection(sectionId) {
+                const sections = document.querySelectorAll(".section");
+                sections.forEach(section => section.classList.add("hidden"));
+                const activeSection = document.getElementById(sectionId);
+                activeSection.classList.remove("hidden");
+            }
+            function testNotification() {
+                window.electronAPI.IPC('notify', {
+                    title: 'Burgil',
+                    text: 'This is a very long message',
+                    duration: 20000
+                });
+            }
+            function showDisclaimer() {
+                window.electronAPI.IPC('disclaimer');
+            }
+        </script>
+    </head>
+    <body class="overflow-hidden">
+        <div class="container">
+            <div class="center-box">
+                <div class="animated-border-box-glow"></div>
+                <div class="animated-border-box"></div>
+            </div>
+            <h1 class="text-4xl font-bold text-white title-ai">AI Settings</h1>
+            <div class="flex">
+                <div class="tooltip-text hidden"></div>
+                <div class="sidebar">
+                    <button data-tooltip="Getting Started Guide" onclick="showSection('getting-started')" class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5-6l3 3-3 3" />
+                        </svg>
+                    </button>
+                    <button data-tooltip="Large Language Model Settings" onclick="showSection('llm-settings')" class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657 1.343-3 3-3h3m0 0l3 3-3 3m0-3H15a3 3 0 00-3 3v5m0 0H6v-4m0 4H3m3 0v-5a3 3 0 013-3h3" />
+                        </svg>
+                    </button>
+                    <button data-tooltip="Text-to-Speech Settings" onclick="showSection('tts-settings')" class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5v14l11-7L9 5z" />
+                        </svg>
+                    </button>
+                    <button data-tooltip="Artificial General Intelligence Settings" onclick="showSection('agi-settings')" class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6l3 3m0 0l-3 3m3-3H9" />
+                        </svg>
+                    </button>
+                    <button data-tooltip="Manage Data Privacy" onclick="showSection('privacy-settings')" class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <button data-tooltip="Notification Settings" onclick="showSection('notifications-settings')" class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4l3 3 4-6 3 6h4" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="content" style="overflow-y: auto;max-height: 600px;height: fit-content;">
+                    <section id="getting-started" class="section bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-semibold mb-4">Getting Started</h2>
+                        <p>Welcome to the AI settings dashboard. Use the buttons on the left to navigate through different settings sections.</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shine" onclick="testNotification();">Send Test Notification</button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shine" onclick="showDisclaimer();">Disclaimer</button>
+                    </section>
+
+                    <section id="llm-settings" class="section bg-white p-6 rounded-lg shadow-md hidden">
+                        <h2 class="text-2xl font-semibold mb-4">LLM Settings</h2>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">API Key</label>
+                            <input type="text" class="mt-1 p-2 w-full border border-gray-300 rounded-lg" placeholder="Enter your LLM API key">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">API Endpoint</label>
+                            <input type="text" class="mt-1 p-2 w-full border border-gray-300 rounded-lg" value="https://example.com/llm-endpoint" readonly>
+                        </div>
+                    </section>
+
+                    <section id="tts-settings" class="section bg-white p-6 rounded-lg shadow-md hidden">
+                        <h2 class="text-2xl font-semibold mb-4">TTS Settings</h2>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">API Key</label>
+                            <input type="text" class="mt-1 p-2 w-full border border-gray-300 rounded-lg" placeholder="Enter your TTS API key">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">API Endpoint</label>
+                            <input type="text" class="mt-1 p-2 w-full border border-gray-300 rounded-lg" value="https://example.com/tts-endpoint" readonly>
+                        </div>
+                    </section>
+
+                    <section id="agi-settings" class="section bg-white p-6 rounded-lg shadow-md hidden">
+                        <h2 class="text-2xl font-semibold mb-4">AGI / Jarvis Settings</h2>
+
+                        <!-- Voice Interaction Modes -->
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold">Voice Interaction</h3>
+                            <label class="block text-sm font-medium text-gray-700">App Mode</label>
+                            <select class="mt-1 p-2 w-full border border-gray-300 rounded-lg">
+                                <option value="realistic">Realistic</option>
+                                <option value="semi-realistic">Semi-Realistic</option>
+                                <option value="cartoonish">Cartoonish</option>
+                            </select>
+                        </div>
+
+                        <!-- Memory Management -->
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold">Memory Management</h3>
+                            <label class="block text-sm font-medium text-gray-700">Memory Retention Mode</label>
+                            <select class="mt-1 p-2 w-full border border-gray-300 rounded-lg">
+                                <option value="short-term">Short-Term</option>
+                                <option value="long-term">Long-Term</option>
+                                <option value="contextual">Contextual</option>
+                            </select>
+                        </div>
+
+                        <!-- Emotional Simulation -->
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold">Emotional Simulation</h3>
+                            <label class="block text-sm font-medium text-gray-700">Emotional Complexity</label>
+                            <select class="mt-1 p-2 w-full border border-gray-300 rounded-lg">
+                                <option value="basic">Basic Emotions</option>
+                                <option value="advanced">Advanced Emotions</option>
+                            </select>
+                        </div>
+
+                        <!-- Decision-Making -->
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold">Decision-Making</h3>
+                            <label class="block text-sm font-medium text-gray-700">Decision Algorithm</label>
+                            <select class="mt-1 p-2 w-full border border-gray-300 rounded-lg">
+                                <option value="logical">Logical</option>
+                                <option value="adaptive">Adaptive</option>
+                                <option value="intuitive">Intuitive</option>
+                            </select>
+                        </div>
+
+                        <!-- Interaction Modes -->
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">Interaction Mode</label>
+                            <input type="text" class="mt-1 p-2 w-full border border-gray-300 rounded-lg" placeholder="Text or Voice Interaction">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">AGI Level</label>
+                            <select class="mt-1 p-2 w-full border border-gray-300 rounded-lg">
+                                <option value="basic">Basic</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">Training Data Size</label>
+                            <input type="number" class="mt-1 p-2 w-full border border-gray-300 rounded-lg" placeholder="Enter data size in MB">
+                        </div>
+                    </section>
+
+                    <section id="privacy-settings" class="section bg-white p-6 rounded-lg shadow-md hidden">
+                        <h2 class="text-2xl font-semibold mb-4">Privacy Settings</h2>
+                        <p>Manage data privacy and security settings for your AI system.</p>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">Data Collection</label>
+                            <select class="mt-1 p-2 w-full border border-gray-300 rounded-lg">
+                                <option value="enabled">Enabled</option>
+                                <option value="disabled">Disabled</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">Delete User Data</label>
+                            <button class="mt-2 p-2 bg-red-600 text-white rounded-lg">Delete</button>
+                        </div>
+                    </section>
+
+                    <section id="notifications-settings" class="section bg-white p-6 rounded-lg shadow-md hidden">
+                        <h2 class="text-2xl font-semibold mb-4">Notifications</h2>
+                        <p>Configure notification preferences for your AI system.</p>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">Email Notifications</label>
+                            <select class="mt-1 p-2 w-full border border-gray-300 rounded-lg">
+                                <option value="enabled">Enabled</option>
+                                <option value="disabled">Disabled</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700">SMS Notifications</label>
+                            <select class="mt-1 p-2 w-full border border-gray-300 rounded-lg">
+                                <option value="enabled">Enabled</option>
+                                <option value="disabled">Disabled</option>
+                            </select>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="flex justify-end save-btn">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shine">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="#fff" viewBox="0 0 407.096 407.096" stroke="currentColor">
+                        <g xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d="M402.115,84.008L323.088,4.981C319.899,1.792,315.574,0,311.063,0H17.005C7.613,0,0,7.614,0,17.005v373.086    c0,9.392,7.613,17.005,17.005,17.005h373.086c9.392,0,17.005-7.613,17.005-17.005V96.032    C407.096,91.523,405.305,87.197,402.115,84.008z M300.664,163.567H67.129V38.862h233.535V163.567z" />
+                                <path d="M214.051,148.16h43.08c3.131,0,5.668-2.538,5.668-5.669V59.584c0-3.13-2.537-5.668-5.668-5.668h-43.08    c-3.131,0-5.668,2.538-5.668,5.668v82.907C208.383,145.622,210.92,148.16,214.051,148.16z" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

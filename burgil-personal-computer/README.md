@@ -1,0 +1,3 @@
+bun install
+
+bun start

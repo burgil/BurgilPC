@@ -1,0 +1,19 @@
+{
+  "name": "screenshot-taker",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "description": "",
+  "dependencies": {
+    "electron": "^33.0.2",
+    "electron-screenshot": "^1.0.5",
+    "jimp": "^1.6.0",
+    "node-screenshot": "^0.1.1",
+    "screenshot-desktop": "^1.15.0"
+  }
+}
