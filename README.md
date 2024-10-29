@@ -39,13 +39,13 @@ For any issues, inquiries, or support, please reach out via [GitHub issues](http
 
 *Please note:* Burgil Personal Computer integrates these resources in their npm library form or using a cdn link, and not using their full source code, no modifications were made to the core projects, feel free to contact me for clarifications, and I am strictly following the license of every project that enters my project.
 
+> [!CAUTION]
+> **Disclaimer:**
+> **I am not affiliated, endorsed, sponsored, or officially connected in any way with any of these companies, individuals, products, or websites.**
+> I am Burgil, an independent creator. I come in peace. Hello, World! 👋🌎
+> **This project and its contents are independently created.**
+
 **Special Thanks to:**
-
-**Disclaimer: I am not affiliated, endorsed, sponsored, or officially connected in any way with any of these companies, individuals, products, or websites.**
-
-I am Burgil, an independent creator. I come in peace. Hello, World! 👋🌎
-
-**This project and its contents are independently created.**
 
 - **[You](https://www.youtube.com/watch?v=dQw4w9WgXcQ)** 🙏 - *Thank you* for taking the time to read this, and for joining me on this journey of creativity and exploration.
 - **Various Plugin and Node.js Developers** 🙏 - if my code rely on your open-source packages and I missed them, you deserve recognition for your contributions. Please [let me know](https://github.com/burgil/BurgilPC/issues/new) so I can add you to the list.
