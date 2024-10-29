@@ -21,6 +21,8 @@ For any issues, inquiries, or support, please reach out via [GitHub issues](http
 
 > [!TIP]
 > **Beta Access:**
+> There is not a beta yet, but,
+>
 > For anyone interested in the beta, feel free to reach out directly! Updates, demos, and other progress videos will be posted.
 
 ---
