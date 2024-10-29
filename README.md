@@ -3,7 +3,7 @@
 
 # Burgil Personal Computer
 
-**Burgil Personal Computer** is a visionary smart PC built for a personal and unique AI experience. This evolving project goes beyond typical frameworks, embodying a lifelike assistant capable of listening, seeing, hearing, and in the future, maybe even "smelling". It's designed for advanced interactivity with window management, real-time hot reload, and plugin support for seamless feature expansion with more groundbreaking capabilities on the horizon. This journey is just beginning, with each update bringing Burgil Personal Computer closer to becoming the smart, intuitive companion of the future. Stay tuned!
+**Burgil Personal Computer** is a visionary smart PC built for a personal and unique AI experience. This evolving project goes beyond typical frameworks, embodying a lifelike assistant capable of listening, seeing, hearing, touching, and in the future, maybe even "smelling". It's designed for advanced interactivity with window management, real-time hot reload, and plugin support for seamless feature expansion with more groundbreaking capabilities on the horizon. This journey is just beginning, with each update bringing Burgil Personal Computer closer to becoming the smart, intuitive companion of the future. Stay tuned!
 
 > [!IMPORTANT]
 > **A Personal Project, Read-Only, Not Yet Licensed:**  
@@ -12,6 +12,14 @@
 > [!TIP]
 > **Beta Access:**  
 > For anyone interested in the beta, feel free to reach out directly! Updates, demos, and other progress videos will be posted.
+
+---
+
+## Table of Contents
+
+1. [Subheading 1](docs/example.md)
+2. [Subheading 2](docs/example.md)
+3. [Subheading 3](docs/example.md)
 
 ---
 
