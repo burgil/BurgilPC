@@ -21,9 +21,12 @@ For any issues, inquiries, or support, please reach out via [GitHub issues](http
 
 > [!TIP]
 > **Beta Access:**
+>
 > There is not a beta yet, but,
 >
-> For anyone interested in the beta, feel free to reach out directly! Updates, demos, and other progress videos will be posted.
+> For anyone interested in the beta, feel free to reach out directly!
+>
+> Updates, demos, and other progress videos will be posted.
 
 ---
 
@@ -31,9 +34,9 @@ For any issues, inquiries, or support, please reach out via [GitHub issues](http
 
 ### $${\color{red}This\space project\space is\space currently\space not\space being\space licensed.}$$
 
-**THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.**
-
 **Burgil Personal Computer** is a pre-release version intended for personal computer use only, not for commercial or business purposes. Full open-source release will follow after final security and moderation enhancements are complete. Commercial or business use is not permitted without express permission.
+
+**THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.**
 
 ---
 
@@ -44,9 +47,9 @@ For any issues, inquiries, or support, please reach out via [GitHub issues](http
 > [!CAUTION]
 > **Disclaimer:**
 >
-> **This project and its contents are independently created.**
->
 > **I am not affiliated, endorsed, sponsored, or officially connected in any way with any of these companies, individuals, products, or websites.**
+>
+> **This project and its contents are independently created.**
 >
 > I am Burgil, an independent creator. I come in peace. Hello, World! 👋🌎
 >
