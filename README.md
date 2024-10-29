@@ -27,9 +27,12 @@ For more details on advanced usage, window management, AI integration, and custo
 8. [Hot Reload](docs/hotreload.md)
 9. [Key Scripts](docs/key-scripts.md)
 10. [Breakdown](docs/breakdown.md)
-. [](docs/.md)
-. [](docs/.md)
-. [](docs/.md)
+11. [Installation](docs/installation.md)
+12. [Usage](docs/usage.md)
+13. [Building the Project](docs/building.md)
+14. [Create a New Window](docs/new-window.md)
+15. [AI Components](docs/ai-components.md)
+16. [Plugins](docs/plugins.md)
 
 ---
 
@@ -95,86 +98,3 @@ Contributions are currently not open. However, we welcome issues or pull request
 ## Credits and Logo
 
 All logos and other design assets that can be found in the repository files were created by me, Burgil, the primary developer of this project, to provide a cohesive and visually engaging theme. These assets are proprietary and should not be used, modified, or redistributed without permission.
-
----
-
-### Create a New Window
-
-Use the automation script to set up a new window:
-
-```bash
-bun new-win
-```
-
-It will prompt you to enter the window name.
-
----
-
-## Usage
-
-### Development Commands
-
-- **Start Server**: Run `bun start` to initialize both frontend and backend hot reloading.
-- **Open New Window**: Use `bun run new-win` to open a new window. Each window is managed independently, allowing flexible UI design.
-- **Build**: Follow these steps for production:
-  - **Build TypeScript**: `bun run build:typescript`
-  - **Build Tailwind CSS**: `bun run build:tailwind`
-  - **Package the App**: Compile and package using Electron Builder:
-
-    ```bash
-    bun run builder
-    ```
-
-- **Hot Reload**: Use `bun start` to initialize the dual hot reload server. It monitors changes in both backend and frontend code for a smooth development workflow.
-- **Creating New Windows**: The `bun run new-win` script simplifies the opening of new application windows. Each window operates independently, allowing for modular and customizable UI layouts.
-
-- **Hot Reload**: Run `bun start` to initiate a dual hot reload server. This setup will monitor changes in both backend and frontend code, automatically refreshing as you develop.
-- **Creating New Windows**: Use the `bun new-win` script to open new application windows easily. Each window is managed independently, allowing a modular UI experience.
-
----
-
-### Building the Project
-
-1. **Build TypeScript**:
-
-   ```bash
-   bun run build:typescript
-   ```
-
-2. **Build Tailwind CSS**:
-
-   ```bash
-   bun run build:tailwind
-   ```
-
-3. **Package the App**:
-   Run the full build process and package the app using Electron Builder:
-
-   ```bash
-   bun run builder
-   ```
-
----
-
-## Plugins
-
-Extend Burgil Personal Computer by placing plugins in the `installed-plugins` directory. Examples include:
-
-- **ai-vision-server**: Adds AI-based vision capabilities with Python and Node.js integration.
-- **screenshot-taker**: Provides functionality for capturing screenshots with optional overlay settings.
-
-For developing custom plugins, see the template provided in `WIP`.
-
-## Plugin Integration
-
-Burgil Personal Computer supports plugins for extending functionality. Place plugins in the `plugins` directory, following the provided template in `WIP` to develop your custom plugins.
-
-### Plugin Development
-
-Extend functionality by adding plugins to `installed-plugins`, using the template in `WIP`. Each plugin can be customized and is managed within the main application scope.
-
----
-
-### AI Components
-
-The **AI Vision Server** and related AI files can be found in the `installed-plugins/ai-vision-server` folder, with Python and Node.js scripts for handling AI-based tasks. See `commands.md` files for details on executing AI functionalities.
