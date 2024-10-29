@@ -41,16 +41,19 @@ For any issues, inquiries, or support, please reach out via [GitHub issues](http
 
 > [!CAUTION]
 > **Disclaimer:**
-> **I am not affiliated, endorsed, sponsored, or officially connected in any way with any of these companies, individuals, products, or websites.**
-> I am Burgil, an independent creator. I come in peace. Hello, World! 👋🌎
+>
 > **This project and its contents are independently created.**
+>
+> **I am not affiliated, endorsed, sponsored, or officially connected in any way with any of these companies, individuals, products, or websites.**
+>
+> I am Burgil, an independent creator. I come in peace. Hello, World! 👋🌎
+>
+> If my code rely on your open-source packages and I missed them, you deserve recognition for your contributions. Please [let me know](https://github.com/burgil/BurgilPC/issues/new) so I can add you to the list.
 
 **Special Thanks to:**
 
 - **[You](https://www.youtube.com/watch?v=dQw4w9WgXcQ)** 🙏 - *Thank you* for taking the time to read this, and for joining me on this journey of creativity and exploration.
-- **Various Plugin and Node.js Developers** 🙏 - if my code rely on your open-source packages and I missed them, you deserve recognition for your contributions. Please [let me know](https://github.com/burgil/BurgilPC/issues/new) so I can add you to the list.
-- **Community of AI and Web Developers** 🙏 - *Thank you* for contributing to frameworks, open-source libraries, and security best practices [that keep the internet safe and functional](https://www.mozilla.org/).
-- **The Ecosystem and Global Developer Community** 🙏 - A heartfelt thanks to every open-source contributor, independent developer, and organization in the software ecosystem. Your collaboration and dedication drive innovation, creating tools, frameworks, and libraries that empower projects like this.
+- **The Ecosystem and Global Developer Community** 🙏 - *Thank you* for contributing to frameworks, open-source libraries, and security best practices [that keep the internet safe and functional](https://www.mozilla.org/). A heartfelt thanks to every open-source contributor, independent developer, and organization in the software ecosystem. Your collaboration and dedication drive innovation, creating tools, frameworks, and libraries that empower projects like this.
 - **[Git](https://git-scm.com/) and [GitHub](https://github.com/pricing)** 🙏 - Thank you for enabling all of this, with tools like Git, GitHub Desktop, and many more resources I may not even be aware of yet. Your platform has truly empowered my development journey. Core tools like Git enable streamlined version control, and GitHub provides a collaborative platform that's instrumental in this project's development.
 - **[VSCode](https://code.visualstudio.com/) and its developers** 🙏 - Thank you for crafting such a powerful and versatile tool. It's been my hammer for building incredible projects and turning ideas into reality.
 - **[Microsoft](https://azure.microsoft.com/en-us/products/ai-services/ai-speech)** 🙏 - *Thank you* For providing the OS I rely on as my "wizard's wand" to create. without it, I'd be without magic. And a special thanks for the recent **Azure** credits, they've been invaluable in expanding my possibilities.
@@ -96,11 +99,11 @@ All logos and other design assets that can be found in the repository files were
 
 ## Contributing
 
-Contributions are currently not open. However, we welcome issues or pull requests related to bug fixes, feature requests, or general feedback.
+Contributions are currently not open. However, I welcome issues or pull requests related to bug fixes, feature requests, or general feedback.
 
 ---
 
-## Documentation Table of Contents
+## Documentation & Table of Contents
 
 For more details on advanced usage, window management, AI integration, and custom plugins, refer to the [docs/](docs/) directory.
 
