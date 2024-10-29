@@ -37,7 +37,7 @@ For any issues, inquiries, or support, please reach out via [GitHub issues](http
 
 ## Acknowledgments
 
-*Please note:* Burgil Personal Computer integrates these resources in their npm library form or using a cdn link, and not using their full source code, no modifications were made to the core projects, feel free to contact me for clarifications, and I am strictly following the license of every project that enters my project.
+*Please note:* Burgil Personal Computer integrates most of these resources in their npm library form or using a cdn link, and not using their full source code, no modifications were made to the core projects, feel free to contact me for clarifications, and I am strictly following the license of every project that enters my project.
 
 > [!CAUTION]
 > **Disclaimer:**
@@ -49,7 +49,7 @@ For any issues, inquiries, or support, please reach out via [GitHub issues](http
 
 - **[You](https://www.youtube.com/watch?v=dQw4w9WgXcQ)** 🙏 - *Thank you* for taking the time to read this, and for joining me on this journey of creativity and exploration.
 - **Various Plugin and Node.js Developers** 🙏 - if my code rely on your open-source packages and I missed them, you deserve recognition for your contributions. Please [let me know](https://github.com/burgil/BurgilPC/issues/new) so I can add you to the list.
-- **Community of AI and Web Developers** 🙏 - *Thank you* for contributing to frameworks open-source, libraries, and security best practices [that keep the internet safe and functional like Mozilla](https://www.mozilla.org/).
+- **Community of AI and Web Developers** 🙏 - *Thank you* for contributing to frameworks, open-source libraries, and security best practices [that keep the internet safe and functional](https://www.mozilla.org/).
 - **The Ecosystem and Global Developer Community** 🙏 - A heartfelt thanks to every open-source contributor, independent developer, and organization in the software ecosystem. Your collaboration and dedication drive innovation, creating tools, frameworks, and libraries that empower projects like this.
 - **[Git](https://git-scm.com/) and [GitHub](https://github.com/pricing)** 🙏 - Thank you for enabling all of this, with tools like Git, GitHub Desktop, and many more resources I may not even be aware of yet. Your platform has truly empowered my development journey. Core tools like Git enable streamlined version control, and GitHub provides a collaborative platform that's instrumental in this project's development.
 - **[VSCode](https://code.visualstudio.com/) and its developers** 🙏 - Thank you for crafting such a powerful and versatile tool. It's been my hammer for building incredible projects and turning ideas into reality.
