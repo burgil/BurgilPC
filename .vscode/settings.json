@@ -12,6 +12,7 @@
         "preconfigured",
         "pyautogui",
         "pyqt",
-        "tfjs"
+        "tfjs",
+        "transpiling"
     ]
 }
