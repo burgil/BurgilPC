@@ -1,15 +1,13 @@
 # Burgil Personal Computer
 
-**Burgil Personal Computer** is a visionary smart PC built for a personal and unique AI experience. This evolving project goes beyond typical frameworks, embodying a lifelike assistant capable of listening, seeing, hearing, touching, and in the future, maybe even "smelling". It's designed for advanced interactivity with window management, real-time hot reload, and plugin support for seamless feature expansion with more groundbreaking capabilities on the horizon. This journey is just beginning, with each update bringing Burgil Personal Computer closer to becoming the smart, intuitive companion of the future. Stay tuned!
-
-> [!NOTE]
-> The readme is under construction.. like you can see..
 > [!IMPORTANT]
 > **A Personal Project, Read-Only, Not Yet Licensed:**  
 > Burgil Personal Computer is not a general-purpose framework or licensed software, and it is currently not intended for public use. Designed exclusively as a private project, this software aims to offer future commercialization in ways that add value responsibly, ensuring safe, ethical, and innovative applications.
-> [!TIP]
-> **Beta Access:**  
-> For anyone interested in the beta, feel free to reach out directly! Updates, demos, and other progress videos will be posted.
+
+**Burgil Personal Computer** is a visionary smart PC built for a personal and unique AI experience. This evolving project goes beyond typical frameworks, embodying a lifelike assistant capable of listening, seeing, hearing, touching, and in the future, maybe even "smelling". It's designed for advanced interactivity with window management, real-time hot reload, and plugin support for seamless feature expansion with more groundbreaking capabilities on the horizon. This journey is just beginning, with each update bringing Burgil Personal Computer closer to becoming the smart, intuitive companion of the future. Stay tuned!
+
+> [!NOTE]
+> The readme is under construction..
 
 ---
 
@@ -86,6 +84,10 @@ Further, all uses of Llama 3.2 materials will comply with Meta's [Acceptable Use
 ## Contact
 
 For any issues, inquiries, or support, please reach out via [GitHub issues](https://github.com/burgil/BurgilPC/issues).
+
+> [!TIP]
+> **Beta Access:**  
+> For anyone interested in the beta, feel free to reach out directly! Updates, demos, and other progress videos will be posted.
 
 ---
 
