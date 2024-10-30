@@ -1,4 +1,7 @@
 {
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
     "cSpell.words": [
         "bunx",
         "Burgil",
@@ -16,6 +19,11 @@
         "pyautogui",
         "pyqt",
         "tfjs",
-        "transpiling"
+        "transpiling",
+        "Burgil",
+        "cmdk",
+        "Embla",
+        "nums",
+        "sonner"
     ]
 }
