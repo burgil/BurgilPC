@@ -5,7 +5,9 @@
     "cSpell.words": [
         "bunx",
         "Burgil",
+        "cmdk",
         "deepgram",
+        "Embla",
         "expressjs",
         "groq",
         "hotreload",
@@ -13,17 +15,15 @@
         "lockb",
         "magicless",
         "nsis",
+        "nums",
         "ONNX",
         "onnxruntime",
         "preconfigured",
         "pyautogui",
         "pyqt",
+        "sonner",
+        "tauri",
         "tfjs",
-        "transpiling",
-        "Burgil",
-        "cmdk",
-        "Embla",
-        "nums",
-        "sonner"
+        "transpiling"
     ]
 }
