@@ -5,6 +5,13 @@
   "windows": ["main"],
   "permissions": [
     "core:default",
-    "shell:allow-open"
+    "shell:allow-open",
+    "core:app:allow-default-window-icon",
+    "core:webview:allow-webview-show",
+    "core:webview:allow-create-webview",
+    "core:webview:allow-create-webview-window",
+    "core:window:default",
+    "core:window:allow-start-dragging",
+    "core:window:allow-create"
   ]
 }
