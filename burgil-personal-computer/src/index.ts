@@ -5,9 +5,9 @@ import createTray from './tray';
 import path from 'node:path';
 import CSP from '../utils/csp';
 // import bridgeLogs from '../utils/bridge-logs';
-import { createInitial } from '../windows/initialWindow';
+// import { createInitial } from '../windows/initialWindow';
 
-const allowedStlyes = [ // Download static files and remove from this list in production
+const allowedStyles = [ // Download static files and remove from this list in production
     'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
 ]
@@ -31,7 +31,7 @@ app.whenReady().then(async () => {
     CSP([
         "default-src 'none'",
         `script-src 'self' file: 'unsafe-inline' 'wasm-unsafe-eval' ${allowedScripts.join(' ')}`,
-        `style-src 'self' file: 'unsafe-inline' ${allowedStlyes.join(' ')}`,
+        `style-src 'self' file: 'unsafe-inline' ${allowedStyles.join(' ')}`,
         `font-src 'self' ${allowedFonts.join(' ')}`,
         "img-src 'self' file:",
         "media-src 'self' file: data:",

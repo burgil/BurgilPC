@@ -9,10 +9,12 @@
 	"scripts": {
 		"start": "bun hotreload/start.ts",
 		"new-win": "bun utils/new-win.ts",
-		"builder": "bun build:tailwind && bun build:typescript && electron-builder build",
-		"build:typescript": "if [ -d out ]; then rm -r out; fi && tsc",
-		"build:tailwind": "bunx tailwindcss -i ./tailwind.css -o ./out/tailwind.css",
-		"build:tailwind:minify": "bunx tailwindcss -m -i ./tailwind.css -o ./out/tailwind.min.css"
+		"builder": "bun build:tailwind:minify && bun build:typescript && electron-builder build",
+		"build:typescript": "if [ -d out ]; then rm -r out; fi && tsc -b",
+		"build:tailwind:minify": "bunx tailwindcss -m -i ./input.css -o ./out/tailwind.min.css",
+		"unused1": "bunx depcheck > depcheck",
+		"unused2": "bunx ts-unused-exports tsconfig.json > depcheck-unused",
+		"unused3": "bunx ts-prune > depcheck-prune"
 	},
 	"dependencies": { "@ricky0123/vad-web": "^0.0.19", "onnxruntime-web": "^1.19.2" },
 	"devDependencies": {

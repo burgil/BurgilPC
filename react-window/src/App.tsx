@@ -24,13 +24,13 @@ function App() {
 				<ModeToggle />
 				<Button>Click me</Button>
 			</div>
-			{/* <SettingsLayout>
-				<SettingsProfilePage />
-				<SettingsAccountPage />
-				<SettingsAppearancePage />
-				<SettingsNotificationsPage />
-				<SettingsDisplayPage />
-			</SettingsLayout> */}
+			{/* <SettingsLayout> */}
+				{/* <SettingsProfilePage /> */}
+				{/* <SettingsAccountPage /> */}
+				{/* <SettingsAppearancePage /> */}
+				{/* <SettingsNotificationsPage /> */}
+				{/* <SettingsDisplayPage /> */}
+			{/* </SettingsLayout> */}
 			{/* <AuthenticationPage /> */}
 			{/* <CardsPage /> */}
 			{/* <DashboardPage /> */}

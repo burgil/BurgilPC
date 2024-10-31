@@ -25,6 +25,3 @@ export function triggerReload() {
     }
     if (config.debug) console.log('Reload signal sent to all clients');
 }
-
-const url = `${config.secure ? 'https' : 'http'}://${config.address}${config.port !== 80 ? `:${config.port}` : ''}`;
-console.log(`Server is running: ${url}`);

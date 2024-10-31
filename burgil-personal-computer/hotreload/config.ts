@@ -1,5 +1,4 @@
 export default {
-    port: 80,
     hotreloadPort: 49142,
     debug: false,
     address: 'localhost',
