@@ -1,44 +1,13 @@
 <script lang="ts">
-  import { onDestroy } from "svelte";
-  import tray from "../utils/tray.svelte";
-  import type { TrayIcon } from "@tauri-apps/api/tray";
-  import { Window, getCurrentWindow } from "@tauri-apps/api/window";
-  import { Webview } from "@tauri-apps/api/webview";
-
-  function newWindow() {
-    const currWindow = getCurrentWindow()
-    const appWindow = new Window("main87", {
-      width: 100,
-      height: 100,
-      parent: currWindow
-    });
-    const webview = new Webview(appWindow, 'main87', {
-      url: "https://github.com/tauri-apps/tauri", // 'app.html',
-      x: 0,
-      y: 0,
-      width: 100,
-      height: 100,
-    });
-    webview.once("tauri://created", function () {
-      console.log("webview successfully created")
-    });
-    webview.once("tauri://error", function (e) {
-      console.log("an error happened creating the webview", e)
-    });
-    // await webview.emit("some-event", "data");
-    // const unlisten = await webview.listen("event-name", (e) => {});
-    // unlisten();
-  }
-
-  let mainTray: TrayIcon;
-  async function mount() {
-    mainTray = await tray.mount();
-    newWindow();
-  }
-  mount();
-  onDestroy(async () => {
-    await tray.unmount(mainTray);
-  });
+    import type { Component } from 'svelte';
+    const windows = Object.values(import.meta.glob('../windows/**/*.svelte', { eager: true })).map(m => m && typeof m === 'object' && 'default' in m ? m.default as Component : null).filter(c => c !== null);
+    // import Example from "../windows/Example.svelte";
 </script>
+<!-- <Example /> -->
 
-<h1>yos2sssssssssssssSsssdss45ss</h1>
+{#each windows as Window}
+    <svelte:component this={Window} />
+{/each}
+
+<h1>In Index</h1>
+<p>This is the main window, it will be hidden. It acts as the main app thread that manages windows. Perhaps statistics about running windows can be shown here in development.</p>

@@ -2,7 +2,7 @@ import { TrayIcon } from "@tauri-apps/api/tray";
 import { defaultWindowIcon } from "@tauri-apps/api/app";
 import { Menu } from "@tauri-apps/api/menu";
 
-async function loadTray(): Promise<TrayIcon> {
+export default async function newTray(): Promise<TrayIcon> {
   const menu = await Menu.new({
     items: [
       {
@@ -40,12 +40,4 @@ async function loadTray(): Promise<TrayIcon> {
     },
   });
   return tray;
-}
-
-export default {
-  mount: loadTray,
-  unmount: async (tray: TrayIcon) => {
-    console.log(tray.id, "the component has mounted");
-    await tray.close();
-  }
 }
