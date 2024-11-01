@@ -9,6 +9,12 @@ const config = {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapter(),
+    alias: {
+      '@/*': 'src/*'
+    },
+    files: {
+      routes: "src/windows",
+    }
   },
 };
 

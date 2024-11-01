@@ -1,4 +1,4 @@
-import { TrayIcon } from "@tauri-apps/api/tray";
+import { TrayIcon, type TrayIconEvent } from "@tauri-apps/api/tray";
 import { defaultWindowIcon } from "@tauri-apps/api/app";
 import { Menu } from "@tauri-apps/api/menu";
 
@@ -19,7 +19,7 @@ export default async function newTray(): Promise<TrayIcon> {
     icon: defaultIcon ?? undefined,
     menu,
     menuOnLeftClick: true,
-    action: (event: any) => {
+    action: (event: TrayIconEvent) => {
       switch (event.type) {
         case "Click":
           // console.log(`mouse ${event.button} button pressed, state: ${event.buttonState}`);
