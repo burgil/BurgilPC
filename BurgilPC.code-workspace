@@ -24,6 +24,7 @@
 			"*/src-tauri/logos": true,
 			// --- Sometimes Needed:
 			"*/.vscode": true,
+			".vscode": true,
 			"*/.env": false,
 			"*/.env.example": false,
 			// ---
