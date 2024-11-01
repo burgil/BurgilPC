@@ -1,0 +1,14 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "desktop-all",
+  "description": "Capability for all windows",
+  "windows": ["*"],
+  "platforms": ["linux", "macOS", "windows"],
+  "permissions": [
+    "core:default",
+    "core:window:default",
+    "core:window:allow-start-dragging",
+    "core:event:allow-listen",
+    "core:event:allow-unlisten"
+  ]
+}
